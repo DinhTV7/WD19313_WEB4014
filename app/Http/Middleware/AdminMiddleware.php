@@ -18,7 +18,7 @@ class AdminMiddleware
     {
         // Kiểm tra nếu user chưa đăng nhập hoặc không phải là admin thì 
         // sẽ quay ngược lại trang client
-        if (!Auth::check() || !Auth::user()->isRoleAdmin()) {
+        if (!Auth::check() || !Auth::user()->isRoleAdmin()) {''
             return redirect()->route('welcome')
                     ->with('error', 'Bạn ko có quyền truy cập vào trang admin');
         }
